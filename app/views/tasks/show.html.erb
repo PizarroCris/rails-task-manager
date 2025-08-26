@@ -1,0 +1,17 @@
+<div class="mb-3 d-flex justify-content-between gap-5">
+  <h2><%= @task.title %></h2>
+  <%= link_to "<button class=' btn border-dark btn-secondary'> <i class='fa-solid fa-pen-to-square'></i> Edit</button>".html_safe, edit_task_path(@task) %>
+</div>
+<p class=""><%= @task.details %></p>
+<p><% if @task.completed %>
+        <div class="d-flex gap-2">
+          <p class="opacity-50"><em>This task is already complete</p> <i class="fa-regular fa-square-check py-1"></i></em>
+        </div>
+      <%else%>
+        <p><em>This task isn't complete</p> <i class="fa-regular fa-square py-1"></i></em>
+      <%end%>
+</p>
+
+<%= link_to "<i class='fa-solid fa-arrow-rotate-left'></i>Back to the list".html_safe, root_path %>
+
+
