@@ -2,7 +2,7 @@
   <h2><%= @task.title %></h2>
   <%= link_to "<button class=' btn border-dark btn-secondary'> <i class='fa-solid fa-pen-to-square'></i> Edit</button>".html_safe, edit_task_path(@task) %>
 </div>
-<p class=""><%= @task.details %></p>
+<p class="alert alert-secondary"><%= @task.details %></p>
 <p><% if @task.completed %>
         <div class="d-flex gap-2">
           <p class="opacity-50"><em>This task is already complete</p> <i class="fa-regular fa-square-check py-1"></i></em>

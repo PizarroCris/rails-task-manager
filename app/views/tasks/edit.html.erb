@@ -2,13 +2,17 @@
 
 <div class="d-flex flex-column">
   <%= form_with model: @task do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :details %>
-    <%= f.text_field :details %>
-    <%= f.label :completed %>
-    <%= f.check_box :completed %>
-    <%= f.submit %>
+    <div class="d-flex flex-column align-items-start gap-2">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+      <%= f.label :details %>
+      <%= f.text_field :details,  class: "form-control pe-5" %>
+      <div>
+        <%= f.label :completed %>
+        <%= f.check_box :completed %>
+      </div>
+      <%= f.submit "Update Task", class: "btn btn-primary mt-3 opacity-100" %>
+    </div>
   <% end %>
 
 
